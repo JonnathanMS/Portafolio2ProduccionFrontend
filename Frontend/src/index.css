@@ -1,0 +1,461 @@
+/* @import "../src/Components/styles/normalize.css"; */
+
+:root {
+  --background-color: rgba(44, 121, 204, 0.696);
+  --background-color-solid: rgb(132, 184, 227);
+  --background-color-dark: rgba(0, 0, 0, 0.623);
+  --background-input: rgba(224, 230, 236, 0.93);
+  --background-input2: rgba(150, 168, 186, 0.93);
+  --background-button: rgb(27, 100, 177);
+  --background-button-hover: rgba(44, 121, 204, 0.696);
+  --title-text-color: white;
+  --text-color-placeholder: rgb(62, 59, 59);
+  --text-color: white;
+  --text-dark: black;
+  --text-hover: black;
+  --font-size-title: 1rem;
+  --font-size-text: 1rem;
+  --border-radius: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 1%;
+  background-image: url("../../public/images/compuMatematicasD.png");
+  background-size: cover;
+  /* font-family: sans-serif; */
+  height: 100%;
+  width: 100%;
+  max-width: 1920px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+input::placeholder {
+  color: var(--text-color-placeholder);
+}
+
+.botonLargo {
+  position: relative;
+  width: 80%;
+  margin: 10px 0;
+  border-radius: var(--border-radius) !important;
+  border: 3px solid black;
+  background-color: var(--background-button) !important;
+  color: white;
+  cursor: pointer;
+}
+
+.botonLargo:hover {
+  background-color: var(--background-button-hover) !important;
+  color: var(--text-dark);
+  font-weight: bold;
+}
+
+input {
+  background-color: var(--background-input);
+  border-radius: var(--border-radius);
+  padding-left: 1rem;
+  width: 80%;
+}
+
+.search-input input {
+  border-radius: 0;
+}
+
+/* input[value="F"] {
+  background: tomato;
+}
+input[value="1"] {
+  background: red;
+} */
+
+label {
+  font-weight: bold;
+  display: block;
+  color: var(--text-dark);
+}
+
+.backgTextDark {
+  background-color: var(--background-color-dark);
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  /* width: fit-content; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.backgTextDark p {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.divGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.backgTextLight {
+  background-color: rgba(203, 220, 234, 0.405);
+  color: black;
+  padding: 0 0;
+  margin: 0 0;
+  border-radius: var(--border-radius);
+  width: fit-content;
+}
+
+@media screen and (max-width: 775px) {
+  .divGrid {
+    display: block;
+  }
+}
+
+/* *botonera con estilos de bootstrap ***********************************/
+.nav_botonera {
+  width: fit-content;
+  height: fit-content;
+  margin: 5px 5px;
+  padding: 0 5px;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.883);
+}
+
+.btn_botonera {
+  padding: 10px;
+  margin: 10px;
+  border-radius: var(--border-radius) !important;
+}
+
+.footer_botonera {
+  background: var(--background-color);
+  color: var(--text-color);
+  height: fit-content;
+  border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 990px) {
+  .btn_botonera {
+    width: 8rem;
+    font-size: 20px;
+  }
+  .nav_botonera {
+    width: 10rem;
+    padding: 3px 3px;
+  }
+}
+/* *Código de las card ************************************ **************/
+
+.divCard {
+  background-color: var(--background-color);
+  color: white;
+  padding: 1rem 1rem;
+  margin: 1rem;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.divBotonCard {
+  display: flex;
+  align-items: flex-end;
+}
+
+.botonCard {
+  background-color: rgba(25, 59, 181, 0.764);
+  color: white;
+  font-size: 1rem;
+  border-radius: 1rem;
+  margin: 2px;
+  text-align: center;
+}
+.botonCard:hover {
+  background-color: var(--background-button-hover);
+  color: var(--text-dark);
+}
+.linkCard {
+  margin-left: 0px;
+  color: white;
+}
+
+/* *taskformPage y Genrar citas **************************************************************** */
+
+.div1Generar {
+  width: 70%;
+  border-color: black;
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+  color: white;
+}
+
+.div1Generar label {
+  font-size: var(--font-size-text);
+}
+
+.div1Generar input {
+  margin-inline-start: 1rem;
+  margin-inline-end: 1rem;
+  color: var(--text-dark);
+  font-weight: "bold";
+  font-size: 1rem;
+  width: 90%;
+  margin: 1% 5%;
+  background-color: rgba(240, 255, 255, 0.586);
+}
+.div1Generar input::placeholder {
+  color: black;
+}
+
+.textareaGenerar {
+  width: 90%;
+  margin: 1% 5%;
+  padding: 5px;
+  position: center;
+  border-radius: var(--border-radius);
+  padding-left: 1rem;
+  background-color: rgba(240, 255, 255, 0.586);
+}
+
+.guardarGenerar {
+  position: center;
+  display: block;
+  width: 10rem;
+  height: 40px;
+  margin-bottom: 1rem;
+  /* padding: 0 40px; */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+  outline: none;
+  background-color: var(--background-button);
+  color: rgb(255, 255, 255);
+  border-radius: var(--border-radius);
+}
+
+.guardarGenerar:hover {
+  background-color: var(--background-button-hover);
+}
+
+@media screen and (max-width: 772px) {
+  .div1Generar {
+    width: 100%;
+  }
+}
+
+/* *TABLAS RESPONSIVAS: ********************************************************************************* */
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  background-color: var(--background-input2);
+  border: 2px solid black;
+  padding: 8px;
+  color: var(--text-dark);
+}
+
+th {
+  background-color: var(--background-button);
+  color: white;
+  font-size: 20px;
+}
+
+td.available {
+  background-color: var(--background-color-solid);
+  cursor: pointer;
+  color: black;
+}
+
+td.unavailable {
+  background-color: #887b7b;
+  color: black;
+}
+
+@media only screen and (max-width: 1000px),
+  (min-device-width: 1000px) and (max-device-width: 1024px) {
+  /* forzando la tabla a no portarse como tabla*/
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Ocultar encabezados de tabla (pero no mostrar: ninguno;, por accesibilidad) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  /* tr {
+    margin: 0 0 1rem 0;
+  } */
+  tr {
+    background: var(--background-color-solid);
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: var(--border-radius);
+  }
+
+  tr:nth-child(odd) {
+    background: var(--background-color-solid);
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: var(--border-radius);
+  }
+
+  td {
+    /* Compórtamiento como una "fila" */
+    border: none;
+    border-bottom: 3px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    font-size: 20px;
+    padding-top: 0px;
+    height: fit-content;
+    text-align: end;
+    border-radius: var(--border-radius);
+    background-color: var(--background-color);
+    margin: 5px;
+  }
+
+  td:before {
+    /* Ahora como un encabezado de tabla*/
+    position: absolute;
+    /* Los valores superior/izquierdo imitan el relleno*/
+    top: 0;
+    left: 6px;
+    height: 95%;
+    width: fit-content;
+    padding-left: 2%;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: left;
+    /* background-color: var(--background-button);
+    border: 1px solid white;
+    border-radius: var(--border-radius); */
+    color: white;
+  }
+  /* *Aqui podemos nombrar el before de cada td, se puede usar esto en cada module.css para que cada tabla tenga sus encabezados respectivos */
+  /* 
+  @media only screen and (max-width: 1000px),
+  (min-device-width: 1000px) and (max-device-width: 1024px) {
+  .tablaUsuario td:nth-of-type(1):before {
+    content: "Nombre";
+  }
+  .tablaUsuario td:nth-of-type(2):before {
+    content: "Apellidos";
+  }
+  .tablaUsuario td:nth-of-type(3):before {
+    content: "Cedula";
+  }
+  .tablaUsuario td:nth-of-type(4):before {
+    content: "Fecha de nacimiento";
+  }
+  .tablaUsuario td:nth-of-type(5):before {
+    content: "Correo";
+  }
+  .tablaUsuario td:nth-of-type(6):before {
+    content: "Usuario";
+  }
+  .tablaUsuario td:nth-of-type(7):before {
+    content: "Celular";
+  }
+} */
+}
+
+/* *IFRAME RESPONSIVO  *******************************************************************/
+.transparent-input {
+  background-color: var(--background-input);
+  color: black;
+  width: 50%;
+  margin: 5px;
+  border-radius: var(--border-radius);
+  padding-left: 1rem;
+}
+
+.transparent-input::placeholder {
+  color: var(--text-dark);
+  padding: 0 1rem;
+}
+
+.iframe-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.div-iframe {
+  position: relative; /* Lo estamos estableciendo en una posición relativa para que después podamos posicionar nuestro iframe en relación con el div. */
+  overflow: hidden; /* para ocultar cualquier elemento que pueda ser colocado fuera del contenedor. */
+  padding-top: 56.25%; /* la propiedad apadding-top puede recibir un porcentaje, esto es lo que mantiene nuestro iframe a la proporción correcta.  */
+  width: 100%;
+  height: 100%;
+  margin: 2rem 5%;
+}
+
+.iframe-responsivo {
+  position: absolute; /* le dará al iframe una posición relativa a la envoltura y la dejará posicionarse sobre el relleno del envoltorio. */
+  top: 0; /* para colocar el iframe en el centro del contenedor. */
+  left: 0; /* para colocar el iframe en el centro del contenedor. */
+  width: 100%; /* para que el iframe tome todo el espacio del div. */
+  height: 100%; /* para que el iframe tome todo el espacio del div. */
+  border: 0;
+}
+
+.textBox {
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: 10px;
+  margin: 5px;
+  color: var(--text-dark);
+}
+
+/* *LOADER  ***************************************************************************************************** */
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #000;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #000 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ************************************************************************************ */

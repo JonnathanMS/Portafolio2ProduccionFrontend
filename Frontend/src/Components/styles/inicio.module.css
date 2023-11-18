@@ -1,0 +1,20 @@
+.main {
+  width: 100%;
+}
+
+.header {
+  color: var(--text-dark);
+  text-align: center;
+  height: 100%;
+  padding: 1%;
+  width: 100%;
+}
+.title {
+  font-weight: 3px;
+}
+.imgIndex {
+  height: 30vh;
+  width: 30vh;
+  align-items: flex-end;
+  border-radius: 50%;
+}

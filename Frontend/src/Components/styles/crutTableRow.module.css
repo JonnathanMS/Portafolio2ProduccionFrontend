@@ -1,0 +1,46 @@
+.inputBoton {
+  padding-left: 0;
+  justify-content: center;
+  width: 5rem;
+}
+
+.inputBoton button {
+  margin: 5px 5px;
+  width: 5rem;
+}
+.adjustWeigth {
+  width: 6rem;
+}
+
+.divButon {
+  display: block;
+}
+
+@media only screen and (max-width: 1000px),
+  (min-device-width: 1000px) and (max-device-width: 1024px) {
+  /* aqui podemos nombrar el before de cada td  */
+  .trTareas td:nth-of-type(1):before {
+    content: "Título:";
+  }
+  .trTareas td:nth-of-type(2):before {
+    content: "Descripción:";
+  }
+  .trTareas td:nth-of-type(3):before {
+    content: "Fecha:";
+  }
+  .trTareas td:nth-of-type(4):before {
+    display: none !important;
+  }
+
+  .inputBoton {
+    display: flex;
+    width: inherit;
+  }
+  .adjustWeigth {
+    width: inherit;
+  }
+  .inputBoton button {
+    margin: 3px 10px;
+    width: 5rem;
+  }
+}

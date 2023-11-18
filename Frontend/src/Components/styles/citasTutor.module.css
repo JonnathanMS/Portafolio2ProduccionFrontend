@@ -1,0 +1,15 @@
+.checkboxT {
+  transform: scale(1.5);
+  width: 1rem;
+  margin: 0 1rem;
+}
+
+.labelT {
+  margin: 0 1rem;
+}
+
+.divCheckbox {
+  display: flex;
+  margin: 1rem 0;
+  justify-content: center;
+}

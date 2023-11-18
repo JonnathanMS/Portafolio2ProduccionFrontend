@@ -1,0 +1,36 @@
+.formu {
+  background-color: var(--background-color);
+  width: 60%;
+  border-radius: 1rem;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+.login_form {
+  opacity: 1.9;
+  padding: 5px 1rem;
+}
+
+.link {
+  color: black;
+  margin-left: 1rem;
+}
+
+.login_ojo {
+  position: relative;
+}
+
+.login_icon_eye {
+  position: absolute;
+  font-size: 25px;
+  color: rgb(3, 3, 3);
+  top: 40%;
+  right: 14%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 990px) {
+  .formu {
+    width: 100%;
+  }
+}

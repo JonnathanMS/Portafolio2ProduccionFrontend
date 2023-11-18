@@ -1,0 +1,12 @@
+.titleShort {
+  width: 50%;
+  border-radius: 0 !important;
+}
+
+.crudForm input {
+  border-radius: 0;
+}
+
+.crudForm button {
+  margin-top: 1rem;
+}

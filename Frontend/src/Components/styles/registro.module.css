@@ -1,0 +1,59 @@
+.form_box {
+  width: 100%;
+  height: fit-content;
+  /* background: var(--background-color); */
+  color: #000000;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 5px;
+  margin-top: 5px;
+  border-radius: 1rem;
+}
+
+.panel_derecho {
+  float: right;
+  width: 45%;
+}
+
+.panel_izquierdo {
+  float: left;
+  width: 45%;
+}
+
+.login_ojo {
+  position: relative;
+}
+
+.login_icon_eye {
+  position: absolute;
+  font-size: 25px;
+  color: rgb(3, 3, 3);
+  top: 40%;
+  right: 14%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .form_box {
+    width: 100%;
+    height: fit-content;
+    background: var(--background-color);
+    /* top: 100%; */
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 2%;
+  }
+
+  .panel_derecho {
+    float: inline-end;
+    width: 100%;
+  }
+
+  .panel_izquierdo {
+    float: inline-start;
+    width: 100%;
+  }
+
+  /* termina el media screen de 800 px */
+}
