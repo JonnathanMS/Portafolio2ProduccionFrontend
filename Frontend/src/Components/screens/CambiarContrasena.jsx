@@ -111,14 +111,14 @@ function CambiarContrasena() {
         {/* <form id="form1"> */}
         <center>
           <div className={styles.form_box}>
-            <h1>Actualizacion de datos:</h1>
+            <h1 className="backgTextLightForm">Actualización de datos:</h1>
             <br />
             {loading && <Loader />}
             {RegisterErrors.map((error, i) => (
               <Message msg={error} bgColor="red" key={i}></Message>
             ))}
             <div className={styles.panel_izquierdo}>
-              <label className="backgTextLight">Nombres </label>
+              <label className="backgTextLightForm">Nombres </label>
               <input
                 type="text"
                 placeholder="Ingrese su Nombre"
@@ -126,7 +126,7 @@ function CambiarContrasena() {
                 name="nombres"
               />
 
-              <label className="backgTextLight">Fecha</label>
+              <label className="backgTextLightForm">Fecha</label>
               <input
                 type="date"
                 name="fecha"
@@ -134,37 +134,37 @@ function CambiarContrasena() {
                 max="2024-12-31"
                 id="fecha"
               />
-              <label className="backgTextLight">Cedula</label>
+              <label className="backgTextLightForm">Cédula</label>
               <input
                 type="number"
                 placeholder="ingrese su numero de Cedula"
                 id="cedula"
                 name="cedula"
               />
-              <label className="backgTextLight">Usuario</label>
+              <label className="backgTextLightForm">Usuario</label>
               <input
                 type="text"
                 placeholder="ingrese su usuario de acceso"
                 id="usuario"
                 name="username"
               />
-              <label className="backgTextLight">Correo Electronico</label>
+              <label className="backgTextLightForm">Correo Electrónico</label>
               <input
                 type="text"
-                placeholder="ingrese su correo Electronico"
+                placeholder="ingrese su correo Electrónico"
                 id="correo"
                 name="email"
               />
             </div>
             <div className={styles.panel_derecho}>
-              <label className="backgTextLight">Apellidos</label>
+              <label className="backgTextLightForm">Apellidos</label>
               <input
                 type="text"
                 placeholder="ingrese sus Apellidos"
                 id="apellidos"
                 name="apellidos"
               />
-              <label className="backgTextLight">Celular</label>
+              <label className="backgTextLightForm">Celular</label>
               <input
                 type="number"
                 placeholder="Ingrese Celular"
@@ -173,7 +173,7 @@ function CambiarContrasena() {
               />
 
               {/* ¿Aqui empieza el eye icon */}
-              <label className="backgTextLight">Contraseña Actual</label>
+              <label className="backgTextLightForm">Contraseña Actual</label>
               <div className={styles.login_ojo}>
                 <input
                   type={passwordVisible1 ? "text" : "password"}
@@ -192,7 +192,7 @@ function CambiarContrasena() {
                   )}
                 </span>
               </div>
-              <label className="backgTextLight">Contraseña nueva</label>
+              <label className="backgTextLightForm">Contraseña nueva</label>
               <div className={styles.login_ojo}>
                 <input
                   type={passwordVisible ? "text" : "password"}
@@ -207,7 +207,7 @@ function CambiarContrasena() {
                   {passwordVisible ? <BsFillEyeFill /> : <BsFillEyeSlashFill />}
                 </span>
               </div>
-              <label className="backgTextLight">
+              <label className="backgTextLightForm">
                 Repite la contraseña nueva
               </label>
               <div className={styles.login_ojo}>

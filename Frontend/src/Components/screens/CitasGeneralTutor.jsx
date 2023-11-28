@@ -136,7 +136,7 @@ function CitasGeneralTutor() {
                 <hr style={{ border: "5px solid black" }} />
                 <h5 className="backgTextDark">
                   No tienes citas sin tomar! Genera nuevas citas de tutoria en
-                  la opción de la barra de navegacion Generar Tutoria.
+                  la opción de la barra de navegacion Generar Tutoría.
                 </h5>
               </>
             ))}

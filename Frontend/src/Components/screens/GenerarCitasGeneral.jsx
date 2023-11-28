@@ -89,18 +89,18 @@ function GenerarCitasGeneral() {
             <input type="text" {...register("tutor")} value={user.username} />
 
             <label htmlFor="descripcion">
-              Descripcion: métodos, links e info.
+              Descripción: métodos, links e info.
             </label>
             <textarea
               className="textareaGenerar"
               cols="3"
               rows="3"
-              placeholder="Descripción: Aquí puedes poner links, informacion, el tema que vas explicar, el costo, entre otros"
+              placeholder="Descripción: Aquí puedes poner links, información, el tema que vas explicar, el costo, entre otros"
               {...register("descripcion")}
             ></textarea>
-            <label htmlFor="fecha">Fecha de la tutoria:</label>
+            <label htmlFor="fecha">Fecha de la tutoría:</label>
             <input type="date" {...register("fecha")} />
-            <label htmlFor="hora">hora:</label>
+            <label htmlFor="hora">Hora:</label>
             <input type="time" {...register("hora")} />
             <button className="guardarGenerar">Guardar</button>
           </form>

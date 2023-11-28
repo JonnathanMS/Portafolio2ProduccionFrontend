@@ -15,7 +15,7 @@ function NavScrollExample() {
     <Navbar expand="lg" className={`bg-body-black ${styles.navbar}`}>
       <Container fluid>
         <Navbar.Brand
-          href={isAuthenticated ? "/cuentaUsuario" : "/registro"}
+          href={isAuthenticated ? "/#/cuentaUsuario" : "/#/registro"}
           className={`text-white ${styles.navBrand}`}
         >
           {isAuthenticated ? (
@@ -35,7 +35,7 @@ function NavScrollExample() {
             navbarScroll
           >
             {
-              <Nav.Link href="/servicios" className={styles.navLink}>
+              <Nav.Link href="/#/servicios" className={styles.navLink}>
                 Videos
               </Nav.Link>
             }
@@ -48,34 +48,41 @@ function NavScrollExample() {
                   color="black"
                   className={styles.navLink}
                 >
-                  <NavDropdown.Item href="/generarCitasGeneral">
-                    Generar tutoria
+                  <NavDropdown.Item href="/#/generarCitasGeneral">
+                    Generar tutoría
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/citasGeneral">
-                    Tomar tutoria
+                  <NavDropdown.Item href="/#/citasGeneral">
+                    Tomar tutoría
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/citasGeneralUser">
-                    Mis tutorias
+                  <NavDropdown.Item href="/#/citasGeneralUser">
+                    Mis tutorías
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/citasGeneralTutor">
+                  <NavDropdown.Item href="/#/citasGeneralTutor">
                     Mis aprendices
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/crudApi">
+                  <NavDropdown.Item href="/#/crudApi">
                     Mis tareas
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/cuentaUsuario">
+                  <NavDropdown.Item href="/#/cuentaUsuario">
                     Mi cuenta
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/cambiarContrasena">
+                  <NavDropdown.Item href="/#/cambiarContrasena">
                     Actualizar datos
                   </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item
+                    href="https://jonnathanms.github.io"
+                    target="_blank"
+                  >
+                    Portafolio 1
+                  </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="/inicio" className={styles.navLink}>
+                <Nav.Link href="/#/inicio" className={styles.navLink}>
                   Inicio
                 </Nav.Link>
-                <Nav.Link href="/contactForm" className={styles.navLink}>
+                <Nav.Link href="/#/contactForm" className={styles.navLink}>
                   Contáctame
                 </Nav.Link>
                 <Nav.Link
@@ -85,18 +92,18 @@ function NavScrollExample() {
                   }}
                   className={styles.navLink}
                 >
-                  Cerrar sesion
+                  Cerrar sesión
                 </Nav.Link>
               </>
             ) : (
               <>
-                <Nav.Link href="/contactForm" className={styles.navLink}>
+                <Nav.Link href="/#/contactForm" className={styles.navLink}>
                   Contáctame
                 </Nav.Link>
                 <Nav.Link href="/" className={styles.navLink}>
                   Index
                 </Nav.Link>
-                <Nav.Link href="/login" className={styles.navLink}>
+                <Nav.Link href="/#/login" className={styles.navLink}>
                   Login
                 </Nav.Link>
               </>

@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import styles from "../styles/inicio.module.css";
+import logo from "../../images/logon.JPG";
 function Inicio() {
   return (
     <div>
@@ -10,11 +11,7 @@ function Inicio() {
         </center>
       </header>
       <center>
-        <img
-          className={styles.imgIndex}
-          src="../../public/images/deEspalda.jpg"
-          alt="logo"
-        ></img>
+        <img className={styles.imgIndex} src={logo} alt="logo"></img>
       </center>
       <center>
         <nav className="nav_botonera">

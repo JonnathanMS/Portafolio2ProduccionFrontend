@@ -1,5 +1,11 @@
 // import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  HashRouter,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { AuthProvider } from "./Components/context/AuthContext.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
@@ -30,7 +36,7 @@ const App = () => {
       <AuthProvider>
         <FetchTaskProvider>
           <CitaGeneralProvider>
-            <Router>
+            <HashRouter>
               <main className="container">
                 <NavbarBootstrap />
                 <Routes>
@@ -72,7 +78,7 @@ const App = () => {
                   </Route>
                 </Routes>
               </main>
-            </Router>
+            </HashRouter>
           </CitaGeneralProvider>
         </FetchTaskProvider>
       </AuthProvider>

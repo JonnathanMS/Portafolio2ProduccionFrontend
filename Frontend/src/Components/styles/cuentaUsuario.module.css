@@ -26,7 +26,7 @@
     content: "Apellidos";
   }
   .tablaUsuario td:nth-of-type(3):before {
-    content: "Cedula";
+    content: "Cédula";
   }
   .tablaUsuario td:nth-of-type(4):before {
     content: "Fecha de nacimiento";

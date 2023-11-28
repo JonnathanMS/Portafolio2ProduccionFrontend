@@ -5,6 +5,10 @@ import { useAuth } from "../context/AuthContext.jsx";
 import Message from "../crud/Message.jsx";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import Loader from "../crud/Loader.jsx";
+import {
+  setTimeOutFunction,
+  clearTimeOutFunction,
+} from "../../hooks/setTime.js";
 
 function LoginForm() {
   const navigate = useNavigate(); // Obtiene la instancia de history para la redirección
@@ -26,6 +30,7 @@ function LoginForm() {
       email: objDatosLogin.email,
       password: objDatosLogin.password,
     };
+
     signin(data);
     setLoading(true);
     setIntentos(intentos - 1);
@@ -36,6 +41,15 @@ function LoginForm() {
     }
   };
   useEffect(() => {
+    setTimeOutFunction(
+      loading,
+      setLoading,
+      "El servidor esta un poco lento. Por fabor intenta nuevamente."
+    );
+  }, [loading]);
+
+  useEffect(() => {
+    clearTimeOutFunction();
     setLoading(false);
   }, [SigninErrors]);
 
@@ -43,6 +57,7 @@ function LoginForm() {
   useEffect(() => {
     // redirige si el usuario ya está autenticado.
     if (isAuthenticated) {
+      clearTimeOutFunction();
       navigate("/inicio");
     }
   }, [isAuthenticated]);
@@ -84,9 +99,9 @@ function LoginForm() {
               {intentos > 0 ? "Iniciar Sesion" : "Intente más tarde"}
             </button>
           </form>
-          <p id="intentosRestantesP">
+          <h5 id="intentosRestantesP">
             Intentos restantes: <span>{intentos}</span>
-          </p>
+          </h5>
           <div className={styles.registro}>
             <Link className={styles.link} to={"/registro"}>
               No tengo cuenta

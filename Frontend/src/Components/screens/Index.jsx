@@ -4,6 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useNavigate } from "react-router-dom"; // Importa useHistory para la redirección
 import { useEffect } from "react";
+import logo from "../../images/logon.JPG";
 
 const Index = () => {
   const { isAuthenticated } = useAuth(); // errors fue renombrado con : para evitar conflictos en otras secciones.
@@ -13,6 +14,7 @@ const Index = () => {
     // redirige si el usuario ya esta auntenticado.
     if (isAuthenticated) navigate("/inicio");
   }, [isAuthenticated]);
+
   return (
     <div>
       <header className={styles.header}>
@@ -21,11 +23,7 @@ const Index = () => {
         </center>
       </header>
       <center>
-        <img
-          className={styles.imgIndex}
-          src="../../public/images/deEspalda.jpg"
-          alt="logo"
-        ></img>
+        <img className={styles.imgIndex} src={logo} alt="logo"></img>
       </center>
       <center>
         <nav className="nav_botonera">
@@ -49,10 +47,17 @@ const Index = () => {
 
       <footer className="footer_botonera">
         <center>
-          <h5>Administración de citas de tutoría por Jonnathan Monroy</h5>
+          <h5>Importante:</h5>
           <p>
-            Para ver todas las funcionalidaes por favor registra un usuario y
-            logueate
+            Para ver todas las funcionalidades registra un nuevo usuario, o si
+            prefieres ver un usuario pre establecido ingresa con correo:
+            ensayo@hotmail.com contraseña:1234567 Este sitio lo he desarrollado
+            con React y vite en el front, y con Nodejs y express en el Backend:
+            Has{" "}
+            <Link to="/servicios" style={{ color: "white" }}>
+              click aquí
+            </Link>{" "}
+            para ver la presentación.
           </p>
         </center>
       </footer>

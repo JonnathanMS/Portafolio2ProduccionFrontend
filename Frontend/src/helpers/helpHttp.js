@@ -21,7 +21,7 @@ export const helpHttp = () => { //funcion Expresada
         if (!options.body) delete options.body; // con esta linea estamos eliminando la opcion body del objeto para que no provoque errores en la peticion.
 
         //console.log(options);
-        setTimeout(() => controller.abort(), 3000); ////si el servidor esta caido espera 3 segundos y si no responde aborta la peticion fetch
+        setTimeout(() => controller.abort(), 40000); ////si el servidor esta caido espera 40 segundos y si no responde aborta la peticion fetch
 
         //¿como este customFetch retorna una promesa podemos usar then
         return fetch(endpoint, options)

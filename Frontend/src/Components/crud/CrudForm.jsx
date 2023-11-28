@@ -85,7 +85,7 @@ const CrudForm = ({
         <input
           type="text"
           name="description"
-          placeholder="Descripcion"
+          placeholder="Descripción"
           onChange={handleChange}
           value={form.description}
         />
@@ -97,7 +97,10 @@ const CrudForm = ({
             .utc()
             .format("YYYY-MM-DD")}
         />
-        <nav className="nav_botonera" style={{ display: "flex" }}>
+        <nav
+          className={`nav_botonera ${styles.taskBotonera}`}
+          style={{ display: "flex" }}
+        >
           <input
             className="btn btn-outline-primary btn_botonera"
             type="submit"

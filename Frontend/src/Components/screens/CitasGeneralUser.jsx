@@ -23,7 +23,7 @@ function CitasGeneral() {
   return (
     <>
       <center>
-        <h5 className="backgTextDark">Mis próximas tutorias:</h5>
+        <h5 className="backgTextDark">Mis próximas tutorías:</h5>
       </center>
       <div>
         {citasGeneral.map((citaGeneral) => (

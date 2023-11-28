@@ -6,6 +6,7 @@
 
 .labelT {
   margin: 0 1rem;
+  color: var(--text-color);
 }
 
 .divCheckbox {

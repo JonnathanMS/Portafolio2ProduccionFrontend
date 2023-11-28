@@ -15,17 +15,20 @@ export const useFetchTasks = () => {
 export function FetchTaskProvider({ children }) {
   const [db, setDb] = useState(null);
   const [error, setError] = useState(null);
-  const { user } = useAuth();
+  //   const { user } = useAuth();
 
   const api = helpHttp(); //*usando el helper helpHTTP()
-  const url = "http://localhost:4000/api/tasks"; ////Este es el endPoint la url donde esta alojada la api
-  const urlLogin = "http://localhost:4000/api/login";
+  const url = "https://nuevobackend.onrender.com/api/tasks"; ////Este es el endPoint la url donde esta alojada la api
+  const urlLogin = "https://nuevobackend.onrender.com/api/login";
+  //   const url = "http://localhost:8080/api/tasks"; ////Este es el endPoint la url donde esta alojada la api
+  //   const urlLogin = "http://localhost:8080/api/login";
   // para que esto funcione tiene que estar levantado el servidor de json.server como el servidor de create reat app
 
   const login = (usuario) => {
     let options = {
       body: usuario,
       headers: { "content-type": "application/json" },
+      credentials: "include",
     };
 
     api.post(urlLogin, options).then((res) => {

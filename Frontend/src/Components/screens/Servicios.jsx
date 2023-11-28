@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
 const Servicios = () => {
-  const [selectedVideo, setSelectedVideo] = useState("");
-  const [titleVideo, setTitleVideo] = useState("");
+  const [selectedVideo, setSelectedVideo] = useState(
+    "https://www.youtube.com/embed/3H9SQj9B2as"
+  );
+  const [titleVideo, setTitleVideo] = useState("Portafolio-2");
 
   const handleVideoSelect = (event) => {
     let selectedVideo = event.target.value;
@@ -18,7 +20,7 @@ const Servicios = () => {
         <div className="textBox iframe-contenedor adjust">
           <center>
             <h6 style={{ margin: "0 1.5rem", fontWeight: "bold" }}>
-              Presentacion y explicacion de Portafolios:
+              Presentación y explicación de portafolios:
             </h6>
             <p
               style={{
@@ -43,10 +45,16 @@ const Servicios = () => {
               Selecciona un video
             </option>
             <option
+              value="https://www.youtube.com/embed/3H9SQj9B2as"
+              title="Portafolio-2"
+            >
+              Portafolio 2
+            </option>
+            <option
               value="https://www.youtube.com/embed/5ox9MNQqrb0"
               title="Node, express, javascript"
             >
-              Node, express, javaScript.
+              Node, Express, JavaScript.
             </option>
             <option
               value="https://www.youtube.com/embed/9Yu0clIsOOU"
@@ -82,7 +90,7 @@ const Servicios = () => {
               value="https://www.youtube.com/embed/_x7Cs3Wu7L0"
               title="Responsividad, bootstrap, animaciones"
             >
-              Responsividad, bootstrap, animaciones
+              Responsividad, Bootstrap, animaciones
             </option>
             {/* Agrega más opciones de video aquí */}
           </select>

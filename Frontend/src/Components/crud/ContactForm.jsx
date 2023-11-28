@@ -124,6 +124,12 @@ const ContactForm = () => {
           <Message msg="Los datos han sido enviados" bgColor="#198754" />
         )}
       </div>
+      <a
+        href="https://jonnathanms.github.io"
+        className="portafolio1"
+        target="_blank"
+        rel="noreferrer"
+      ></a>
 
       <a
         href="https://wa.me/573022264607?text=Hola%20me%20interesa%20tu%20trabajo!"

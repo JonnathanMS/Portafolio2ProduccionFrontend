@@ -1,7 +1,7 @@
 //import axios from 'axios'
 import axios from './axios.js'
 
-// const API = 'http://localhost:4000/api'
+// const API = 'http://localhost:8080/api'
 
 // Aqui estamos haciendo una peticion post con el usuario que vendra en el reques.body
 // export const registerRequest = user => axios.post(`${API}/register`, user);

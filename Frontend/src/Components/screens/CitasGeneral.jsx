@@ -80,7 +80,7 @@ function CitasGeneral() {
           />
           <input
             type="search"
-            placeholder="Filtrar por Descripcion"
+            placeholder="Filtrar por Descripción"
             value={filtroDescripcion}
             onChange={(e) => setFiltroHora(e.target.value)}
           />
@@ -101,7 +101,7 @@ function CitasGeneral() {
       </center>
       <center style={{ margin: "5px 0" }}>
         <h5 className="backgTextDark">
-          Todas las citas de tutoria disponibles:
+          Todas las citas de tutoría disponibles:
         </h5>
       </center>
       <div>

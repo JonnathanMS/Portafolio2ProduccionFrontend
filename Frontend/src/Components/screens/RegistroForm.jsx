@@ -56,9 +56,20 @@ function RegistroForm() {
       signup(objDatosRegistro); // aqui estamos haciendo el proceso de registro de usuario usando AuthContext.jsx
       setLoading(true);
     } else {
-      alert("No puede haber campos vacíos");
+      alert(
+        "No puede haber campos vacíos, recuerda incluir la fecha de nacimiento."
+      );
     }
   };
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+        alert("El servidor esta un poco lento, por favor intenta nuevamente.");
+      }, 40000);
+    }
+  }, [loading]);
 
   useEffect(() => {
     setLoading(false);
@@ -75,14 +86,14 @@ function RegistroForm() {
         {/* <form id="form1"> */}
         <center>
           <div className={styles.form_box}>
-            <h1 className="backgTextLight">Formulario de registro:</h1>
+            <h1 className="backgTextLightForm">Formulario de registro:</h1>
             <br />
             {loading && <Loader />}
             {RegisterErrors.map((error, i) => (
               <Message msg={error} bgColor="red" key={i}></Message>
             ))}
             <div className={styles.panel_izquierdo}>
-              <label className="backgTextLight">Nombres </label>
+              <label className="backgTextLightForm">Nombres </label>
               <input
                 type="text"
                 placeholder="Ingrese su Nombre"
@@ -90,7 +101,7 @@ function RegistroForm() {
                 name="nombres"
               />
 
-              <label className="backgTextLight">Fecha</label>
+              <label className="backgTextLightForm">Fecha</label>
               <input
                 type="date"
                 name="fecha"
@@ -98,14 +109,14 @@ function RegistroForm() {
                 max="2024-12-31"
                 id="fecha"
               />
-              <label className="backgTextLight">Cedula</label>
+              <label className="backgTextLightForm">Cédula</label>
               <input
                 type="number"
-                placeholder="ingrese su numero de Cedula"
+                placeholder="ingrese su numero de Cédula"
                 id="cedula"
                 name="cedula"
               />
-              <label className="backgTextLight">Usuario</label>
+              <label className="backgTextLightForm">Usuario</label>
               <input
                 type="text"
                 placeholder="ingrese su usuario de acceso"
@@ -114,21 +125,21 @@ function RegistroForm() {
               />
             </div>
             <div className={styles.panel_derecho}>
-              <label className="backgTextLight">Apellidos</label>
+              <label className="backgTextLightForm">Apellidos</label>
               <input
                 type="text"
                 placeholder="ingrese sus Apellidos"
                 id="apellidos"
                 name="apellidos"
               />
-              <label className="backgTextLight">Celular</label>
+              <label className="backgTextLightForm">Celular</label>
               <input
                 type="number"
                 placeholder="Ingrese Celular"
                 id="celular"
                 name="celular"
               />
-              <label className="backgTextLight">Correo Electronico</label>
+              <label className="backgTextLightForm">Correo Electronico</label>
               <input
                 type="text"
                 placeholder="ingrese su correo Electronico"
@@ -136,7 +147,7 @@ function RegistroForm() {
                 name="email"
               />
               {/* ¿Aqui empieza el eye icon */}
-              <label className="backgTextLight">Contraseña</label>
+              <label className="backgTextLightForm">Contraseña</label>
               <div className={styles.login_ojo}>
                 <input
                   type={passwordVisible ? "text" : "password"}
