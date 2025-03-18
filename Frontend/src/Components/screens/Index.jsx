@@ -4,7 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useNavigate } from "react-router-dom"; // Importa useHistory para la redirección
 import { useEffect } from "react";
-import logo from "../../images/logon.JPG";
+import logo from "../../images/logon.jpg";
 
 const Index = () => {
   const { isAuthenticated } = useAuth(); // errors fue renombrado con : para evitar conflictos en otras secciones.
