@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import styles from "../styles/inicio.module.css";
-import logo from "../../images/logon.JPG";
+import logo from "../../images/logon.jpg";
 function Inicio() {
   return (
     <div>
